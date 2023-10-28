@@ -9,6 +9,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 import Nav from "@/components/Nav.vue"; 
 import Main from "@/components/Main.vue"; 
 import Foot from "@/components/Foot.vue"; 

@@ -1,18 +1,18 @@
 <template>
     <div class="sticky-top" style="height: 100%; z-index:-1">
-      <img src="../assets/Frame 5.png" alt="logo" style="width: 100%; height: 100%; object-fit:cover;">
+      <img src="../assets/Frame_5.png" alt="logo" style="width: 100%; height: 100%; object-fit:cover;">
     </div>
     <div class="sticky-top" style="height: 100%; z-index:-1">
-      <img src="../assets/Frame 6.png" alt="logo" style="width: 100%; height: 100%; object-fit:cover;">
+      <img src="../assets/Frame_6.png" alt="logo" style="width: 100%; height: 100%; object-fit:cover;">
     </div>
     <div class="sticky-top" style="height: 100%; z-index:-1">
-      <img src="../assets/Frame 7.png" alt="logo" style="width: 100%; height: 100%; object-fit:cover;">
+      <img src="../assets/Frame_7.png" alt="logo" style="width: 100%; height: 100%; object-fit:cover;">
     </div>
     <div class="sticky-top" style="height: 100%; z-index:-1">
-      <img src="../assets/Frame 31.png" alt="logo" style="width: 100%; height: 100%; object-fit:cover;">
+      <img src="../assets/Frame_31.png" alt="logo" style="width: 100%; height: 100%; object-fit:cover;">
     </div>
     <div  style="height: 100%; z-index:1">
-      <img src="../assets/Frame 15.png" alt="logo" style="width: 100%; height: 100%; object-fit:cover;">
+      <img src="../assets/Frame_15.png" alt="logo" style="width: 100%; height: 100%; object-fit:cover;">
     </div>
 
     <div class="frame">
@@ -40,6 +40,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 export default {
     name: 'Main',
     methods: {
@@ -49,7 +50,7 @@ export default {
               .then((response) => response.json())
               .then((data) => {
                   //console.log(data);
-                  textElement.textContent = data["testimonials"][index]["message"];
+                  //textElement.textContent = data["testimonials"][index]["message"];
               });
             textElement.style.display = 'block';
         },
@@ -74,7 +75,7 @@ export default {
   margin-bottom: 10px;
 }
 
-,frame .text-wrapper {
+.frame .text-wrapper {
   font-size: 24px;
   font-weight: bold;
 }

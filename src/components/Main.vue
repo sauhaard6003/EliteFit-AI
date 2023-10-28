@@ -48,7 +48,13 @@ export default {
     name: 'Main',
     methods: {
         showText(index) {
-            const textElement = document.getElementById('text-' + index);
+            const textElement = document.getElementById(`text-${index}`);
+            fetch("https://elitefit4you.com/test-api/testimonials.json")
+              .then((response) => response.json())
+              .then((data) => {
+                  //console.log(data);
+                  textElement.textContent = data["testimonials"][index]["message"];
+              });
             textElement.style.display = 'block';
         },
         hideText(index) {

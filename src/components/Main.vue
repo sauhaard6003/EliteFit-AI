@@ -19,20 +19,20 @@
         <div class="group"><div class="text-wrapper">TESTIMONIALS</div></div>
         <div class="div">
             <div class="group-wrapper">
-                <div class="div-wrapper" onmouseover="showText(1)" onmouseout="hideText(1)" ><div class="text-wrapper-2" id="text-1"></div></div>
+                <div class="div-wrapper" ><div class="text-wrapper-2" id="text-1"></div></div>
             </div>
             <div class="overlap-group-wrapper">
                 <div class="overlap-group">
-                    <div class="group-2" onmouseover="showText(2)" onmouseout="hideText(2)" ><div class="text-wrapper-2" id="text-2"></div></div>
+                    <div class="group-2" ><div class="text-wrapper-2" id="text-2"></div></div>
                 </div>
             </div>
             <div class="overlap-wrapper">
                 <div class="overlap">
-                    <div class="group-3" onmouseover="showText(3)" onmouseout="hideText(3)" ><div class="text-wrapper-2" id="text-3"></div></div>
+                    <div class="group-3" ><div class="text-wrapper-2" id="text-3"></div></div>
                 </div>
             </div>
             <div class="group-wrapper-2">
-                <div class="group-4" onmouseover="showText(0)" onmouseout="hideText(0)" ><div class="text-wrapper-2" id="text-0"></div></div>
+                <div class="group-4" ><div class="text-wrapper-2" id="text-0"></div></div>
             </div>
         </div>
     </div>
@@ -50,7 +50,7 @@ export default {
               .then((response) => response.json())
               .then((data) => {
                   //console.log(data);
-                  //textElement.textContent = data["testimonials"][index]["message"];
+                  textElement.textContent = data["testimonials"][index]["message"];
               });
             textElement.style.display = 'block';
         },
@@ -65,41 +65,72 @@ export default {
 <style scoped>
 .frame {
     position: relative;
-    width: 100%;
+    width: 1440px;
     height: 552px;
     background-color: #ffffff;
-    z-index: 5;
 }
 
 .frame .group {
-  margin-bottom: 10px;
+    position: absolute;
+    width: 344px;
+    height: 45px;
+    top: 38px;
+    left: 549px;
 }
 
 .frame .text-wrapper {
-  font-size: 24px;
-  font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Oxygen-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 7.92px;
+    line-height: normal;
 }
 
 .frame .div {
-  flex-wrap: wrap;
+    position: absolute;
+    width: 1231px;
+    height: 277px;
+    top: 192px;
+    left: 105px;
 }
 
 .frame .group-wrapper {
-  width: 25%;
-  padding: 10px;
-  background-image: url(../assets/emily-image.jpg);
+    left: 320px;
+    background-image: url(../assets/emily-image.jpg);
+    background-size: 100% 100%;
+    position: absolute;
+    width: 277px;
+    height: 277px;
+    top: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px #00000040;
 }
 
 .frame .div-wrapper {
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 20px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
+    position: relative;
+    width: 137px;
+    height: 45px;
+    top: 116px;
+    left: 72px;
 }
 
 .frame .text-wrapper-2 {
-  display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Oxygen-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
 }
 
 .frame .overlap-group-wrapper {
@@ -194,10 +225,6 @@ export default {
 }
 #group-4:hover{
     filter: brightness(20%);
-}
-
-.div {
-  flex-wrap: wrap;
 }
 </style>
 

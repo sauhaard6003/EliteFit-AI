@@ -16,29 +16,25 @@
     </div>
 
     <div class="frame">
-      <div class="group"><div class="text-wrapper">TESTIMONIALS</div></div>
-      <div class="div" style="display: flex;">
-        <div class="group-wrapper">
-          <div class="div-wrapper" onmouseover="showText(1)" onmouseout="hideText(1)">
-            <div class="text-wrapper-2" id="text-1"></div>
+        <div class="group"><div class="text-wrapper">TESTIMONIALS</div></div>
+        <div class="div">
+            <div class="group-wrapper">
+                <div class="div-wrapper" onmouseover="showText(1)" onmouseout="hideText(1)" ><div class="text-wrapper-2" id="text-1"></div></div>
+            </div>
+            <div class="overlap-group-wrapper">
+                <div class="overlap-group">
+                    <div class="group-2" onmouseover="showText(2)" onmouseout="hideText(2)" ><div class="text-wrapper-2" id="text-2"></div></div>
+                </div>
+            </div>
+            <div class="overlap-wrapper">
+                <div class="overlap">
+                    <div class="group-3" onmouseover="showText(3)" onmouseout="hideText(3)" ><div class="text-wrapper-2" id="text-3"></div></div>
+                </div>
+            </div>
+            <div class="group-wrapper-2">
+                <div class="group-4" onmouseover="showText(0)" onmouseout="hideText(0)" ><div class="text-wrapper-2" id="text-0"></div></div>
+            </div>
         </div>
-        </div>
-        <div class="group-wrapper">
-          <div class="div-wrapper" onmouseover="showText(2)" onmouseout="hideText(2)">
-            <div class="text-wrapper-2" id="text-2"></div>
-          </div>
-        </div>
-        <div class="group-wrapper">
-          <div class="div-wrapper" onmouseover="showText(3)" onmouseout="hideText(3)">
-            <div class="text-wrapper-2" id="text-3"></div>
-          </div>
-        </div>
-        <div class="group-wrapper">
-          <div class="div-wrapper" onmouseover="showText(0)" onmouseout="hideText(0)">
-            <div class="text-wrapper-0" id="text-0"></div>
-          </div>
-        </div>
-      </div>
     </div>
             
 </template>
@@ -58,7 +54,7 @@ export default {
             textElement.style.display = 'block';
         },
         hideText(index) {
-            const textElement = document.getElementById('text-' + index);
+            const textElement = document.getElementById(`text-${index}`);
             textElement.style.display = 'none';
         }
     }
@@ -74,25 +70,26 @@ export default {
     z-index: 5;
 }
 
-.group {
+.frame .group {
   margin-bottom: 10px;
 }
 
-.text-wrapper {
+,frame .text-wrapper {
   font-size: 24px;
   font-weight: bold;
 }
 
-.div {
+.frame .div {
   flex-wrap: wrap;
 }
 
-.group-wrapper {
+.frame .group-wrapper {
   width: 25%;
   padding: 10px;
+  background-image: url(../assets/emily-image.jpg);
 }
 
-.div-wrapper {
+.frame .div-wrapper {
   background-color: #fff;
   border-radius: 5px;
   padding: 20px;
@@ -100,7 +97,7 @@ export default {
   cursor: pointer;
 }
 
-.text-wrapper-2.active {
+.frame .text-wrapper-2 {
   display: block;
 }
 
@@ -120,7 +117,7 @@ export default {
     height: 626px;
     top: -253px;
     left: -38px;
-    background-image: url(../assets/emily-image.jpg);
+    background-image: url(../assets/david-image.jpg);
     position: relative;
     background-size: cover;
     background-position: 50% 50%;
@@ -150,7 +147,7 @@ export default {
     height: 441px;
     top: -164px;
     left: -27px;
-    background-image: url(../assets/emily-image.jpg);
+    background-image: url(../assets/lisa-image.jpg);
     position: relative;
     background-size: cover;
     background-position: 50% 50%;
@@ -166,7 +163,7 @@ export default {
 
 .frame .group-wrapper-2 {
     left: 0;
-    background-image: url(../assets/emily-image.jpg);
+    background-image: url(../assets/alex-image.jpg);
     background-size: 100% 100%;
     position: absolute;
     width: 277px;

@@ -1,4 +1,4 @@
-# elitefit
+# Pistons
 
 ## Project setup
 ```
